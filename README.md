@@ -1,5 +1,5 @@
 # django_todo_with_auth
-Django todo list with user authentication
+Django Todo-list-app with user authentication
 
     Main page
 ![main page](./result/main_page.jpg)
