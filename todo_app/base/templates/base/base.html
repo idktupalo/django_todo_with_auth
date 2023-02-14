@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: rgb(55,59,231);
+            background: linear-gradient(90deg, rgba(55,59,231,1) 0%, rgba(243,0,255,1) 100%);
+            font-family: 'Nunito', sans-serif;
+            padding-top: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000
+        }
+
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid rgb(247,29,253);
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        .container{
+           max-width: 550px;
+           margin: auto;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: rgb(247,29,253);
+            background: linear-gradient(90deg, rgba(247,29,253,1) 0%, rgba(252,176,69,1) 85%);
+        }
+
+        .task_wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-top: 1px solid rgb(226, 226, 226);
+        }
+
+        .task-title{
+            display: flex;
+        }
+
+        .task-title a{
+            color: #4b5156;
+            margin-left: 10px;
+        }
+
+        .task-complete-icon{
+            display: flex;
+            justify-content: center;
+            align-item: center;
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105, 192, 105);
+            border: 1px solid grey;
+            border-radius: 50%;
+        }
+
+        .task-incomplete-icon{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218, 218, 218);
+            border: 1px solid grey;
+            border-radius: 50%;
+        }
+
+        .delete-link{
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        .search-add-wrapper{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .add-task-btn{
+            font-size: 32px;
+            line-height: 0;
+        }
+
+        .form-field{
+            height: 15px;
+            min-width: 200px;
+            border: 1px solid rgb(247,29,253);
+            border-radius: 5px;
+        }
+
+        .form-field-btn{
+            height: 35px;
+            margin-left: 5px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            background: rgb(247,29,253);
+            background: linear-gradient(90deg, rgba(247,29,253,1) 0%, rgba(252,176,69,1) 85%);
+        }
+
+        .edit-task-wrapper{
+            height: 60px;
+        }
+
+        .edit-task-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            border-radius: 5px 5px 0 0;
+            background: rgb(247,29,253);
+            background: linear-gradient(90deg, rgba(247,29,253,1) 0%, rgba(252,176,69,1) 85%);
+        }
+
+        .black-btn{
+            display: flex;
+            justify-content: center;
+            min-width: 40px;
+            padding: 5px;
+            color: #fff;
+            background-color: #000;
+            border-radius: 5px;
+        }
+
+        .task-form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .del-task-confirm-btn{
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 5px;
+            background: rgb(255, 73, 0);
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>

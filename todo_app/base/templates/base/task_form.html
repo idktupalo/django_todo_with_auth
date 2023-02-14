@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="edit-task-wrapper">
+    <div class="edit-task-header">
+        <a class='black-btn' href="{% url 'tasks' %}">&#8592; Back</a>
+        <h3 style="margin-right: 5px;">Task form</h3>
+    </div>
+</div>
+
+<div class="task-form-wrapper" style="display:flex; justify-content: center;">
+    <form class="task-form" method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="black-btn" type="submit" value="Submit" style="width: 80px; margin-bottom: 10px;">
+    </form>
+
+</div>
+
+{% endblock content %}
